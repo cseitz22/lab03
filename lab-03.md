@@ -15,11 +15,10 @@ nobel <- read_csv("data/nobel.csv")
 
 ## Exercises
 
-### Exercise 1
+### Exercise 1 - examine dataset
 
-Remove this text, and add your answer for Exercise 1 here. Add code
-chunks as needed. Don’t forget to label your code chunk. Do not use
-spaces in code chunk labels.
+Each row is a different Nobel laureate. There are 935 observations with
+26 variables.
 
 ### Exercise 2
 
