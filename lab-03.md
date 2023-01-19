@@ -41,6 +41,22 @@ nobel_living_science <- nobel_living %>%
 
 ### Exercise 3
 
+``` r
+ggplot(nobel_living_science, aes(x=country_us))+
+  geom_bar()+
+  facet_wrap(~category)+
+  coord_flip()+
+  labs(title = "Location of living Nobel laureate winner by field",
+       y="Number of winners",
+       x="USA vs. other")
+```
+
+![](lab-03_files/figure-gfm/living%20winners%20location-1.png)<!-- -->
+
+These results seem to replicate the data shown in the Buzzfeed article
+(their first graph), but don’t necessarily support the overall headline
+yet.
+
 ### Exercise 4
 
 …
