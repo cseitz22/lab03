@@ -1,7 +1,7 @@
 ---
 title: "Lab 03 - Nobel laureates"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Cat Seitz"
+date: "01.19.23"
 output: github_document
 ---
 
