@@ -17,11 +17,11 @@ nobel <- read_csv("data/nobel.csv")
 
 ## Exercises
 
-### Exercise 1 - examine dataset
+### Exercise 1
 
 Each row is a different Nobel laureate. There are 935 observations with 26 variables. 
 
-### Exercise 2 - create new data frame
+### Exercise 2
 
 Code worked to create a new data frame with 228 observations. 
 
@@ -95,9 +95,14 @@ Yes, these data support Buzzfeed's claim. While the majority of winners reside i
 
 ### Exercise 6
 
-```{r}
+```{r birth place of laureates}
 
-
+nobel_living_science %>% 
+  filter(country_us=="USA" & born_country_us=="Other") %>%
+  count(born_country) %>%
+  arrange(desc(n))
 
 ```
+
+Germany and the United Kingdom are tied for the most Nobel laureates being born there. 
 
