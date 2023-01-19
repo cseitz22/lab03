@@ -34,7 +34,7 @@ nobel_living <- nobel %>%
 
 ```
 
-```{r mutate}
+```{r laureate location}
 
 nobel_living <- nobel_living %>%
   mutate(country_us = if_else(country =="USA", "USA", "Other"))
@@ -46,7 +46,7 @@ nobel_living_science <- nobel_living %>%
 
 ### Exercise 3
 
-```{r living winners location}
+```{r living laureate location}
 
 ggplot(nobel_living_science, aes(x=country_us))+
   geom_bar()+
@@ -62,13 +62,34 @@ These results seem to replicate the data shown in the Buzzfeed article (their fi
 
 ### Exercise 4
 
-...
+```{r laureate birth place}
+
+nobel_living_science <- nobel_living_science %>%
+  mutate(born_country_us = if_else(born_country =="USA", "USA", "Other"))
+
+
+ggplot(nobel_living_science, aes(x=born_country_us))+
+  geom_bar()
+
+count(nobel_living_science,born_country_us)
+
+```
+
+105 living Nobel laureates were born in the U.s. 
 
 ### Exercise 5
 
-...
+```{r}
+
+
+
+```
 
 ### Exercise 6
 
-...
+```{r}
+
+
+
+```
 

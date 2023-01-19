@@ -51,7 +51,7 @@ ggplot(nobel_living_science, aes(x=country_us))+
        x="USA vs. other")
 ```
 
-![](lab-03_files/figure-gfm/living%20winners%20location-1.png)<!-- -->
+![](lab-03_files/figure-gfm/living%20laureate%20location-1.png)<!-- -->
 
 These results seem to replicate the data shown in the Buzzfeed article
 (their first graph), but don’t necessarily support the overall headline
@@ -59,12 +59,29 @@ yet.
 
 ### Exercise 4
 
-…
+``` r
+nobel_living_science <- nobel_living_science %>%
+  mutate(born_country_us = if_else(born_country =="USA", "USA", "Other"))
+
+
+ggplot(nobel_living_science, aes(x=born_country_us))+
+  geom_bar()
+```
+
+![](lab-03_files/figure-gfm/laureate%20birth%20place-1.png)<!-- -->
+
+``` r
+count(nobel_living_science,born_country_us)
+```
+
+    ## # A tibble: 2 × 2
+    ##   born_country_us     n
+    ##   <chr>           <int>
+    ## 1 Other             123
+    ## 2 USA               105
+
+105 living Nobel laureates were born in the U.s.
 
 ### Exercise 5
 
-…
-
 ### Exercise 6
-
-…
