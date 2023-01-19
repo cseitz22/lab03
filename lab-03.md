@@ -84,4 +84,20 @@ count(nobel_living_science,born_country_us)
 
 ### Exercise 5
 
+``` r
+ggplot(nobel_living_science, aes(x=country_us, color=born_country_us, fill=born_country_us))+
+  geom_bar()+
+  facet_wrap(~category)+
+  coord_flip()+
+  labs(title = "Location of living Nobel laureate winner by field",
+       y="Number of winners",
+       x="USA vs. other")
+```
+
+![](lab-03_files/figure-gfm/laureate%20location%20and%20birth%20place-1.png)<!-- -->
+
+Yes, these data support Buzzfeed’s claim. While the majority of winners
+reside in the U.S. when they receive the award, the majority of winners
+in all disciplines except economics were born outside of the U.S.
+
 ### Exercise 6
