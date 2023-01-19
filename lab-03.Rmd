@@ -21,19 +21,22 @@ nobel <- read_csv("data/nobel.csv")
 
 Each row is a different Nobel laureate. There are 935 observations with 26 variables. 
 
-### Exercise 2
+### Exercise 2 - create new data frame
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+Code worked to create a new data frame with 228 observations. 
+
+``` {r make new data frame}
+
+nobel_living <- nobel %>% 
+  subset(is.na(died_date)) %>%
+  filter(gender != "org") %>%
+  drop_na(country)
+
+```
 
 ### Exercise 3
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+
 
 ### Exercise 4
 
