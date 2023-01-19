@@ -34,6 +34,16 @@ nobel_living <- nobel %>%
 
 ```
 
+```{r mutate}
+
+nobel_living <- nobel_living %>%
+  mutate(country_us = if_else(country =="USA", "USA", "Other"))
+
+nobel_living_science <- nobel_living %>%
+  filter(category %in% c("Physics", "Medicine", "Chemistry", "Economics"))
+```
+
+
 ### Exercise 3
 
 
@@ -49,3 +59,4 @@ nobel_living <- nobel %>%
 ### Exercise 6
 
 ...
+
